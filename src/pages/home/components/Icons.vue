@@ -19,61 +19,14 @@
 <script>
 export default {
   name: 'HomeIcons',
-  data () {
-    return {
-      iconList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        desc: '东莞必游'
-      }, {
-        id: '0003',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/f44e55751b9343cfb624e2982261f485.png',
-        desc: '黄腾峡景区'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1805/3a/754b47f658e9c602.png',
-        desc: '消暑玩水'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
-      }, {
-        id: '0006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        desc: '东莞必游'
-      }, {
-        id: '0007',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/f44e55751b9343cfb624e2982261f485.png',
-        desc: '黄腾峡景区'
-      }, {
-        id: '0008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1805/3a/754b47f658e9c602.png',
-        desc: '消暑玩水'
-      }, {
-        id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '景点门票'
-      }, {
-        id: '0010',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        desc: '东莞必游'
-      }, {
-        id: '0011',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/f44e55751b9343cfb624e2982261f485.png',
-        desc: '黄腾峡景区'
-      }, {
-        id: '0012',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1805/3a/754b47f658e9c602.png',
-        desc: '消暑玩水'
-      } ]
-    }
+  props: {
+    iconList: Array
   },
   computed: {
     pages () {
+      if (!this.iconList) {
+        return []
+      }
       const pages = []
       this.iconList.forEach((item, index) => {
         const page = Math.floor(index / 8)
@@ -84,6 +37,7 @@ export default {
       })
       return pages
     }
+
   }
 
 }

@@ -1,9 +1,9 @@
 <template>
   <div class="wapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="swiperList.length!==0">
       <swiper-slide v-for="item of swiperList"
                     :item="item"
-                    :key="item.id">
+                    :key="item.id"  >
         <img class="swiper-img"  :src="item.imgUrl" alt />
       </swiper-slide>
 
@@ -20,25 +20,11 @@ export default {
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true
-      },
-      swiperList: [
-        {
-          id: '0001',
-          imgUrl:
-            'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/4950dc04db88330968906bc610caa524.jpg_750x200_1ee2ba8a.jpg'
-        },
-        {
-          id: '0002',
-          imgUrl:
-            'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/201910/78b240572657a6da67e662540c846dd6.jpg_750x200_b75c8be9.jpg'
-        },
-        {
-          id: '0003',
-          imgUrl:
-            'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/c36914f22fdb82d2b8878cbf6dddac98.jpg_750x200_4a63da4b.jpg'
-        }
-      ]
+      }
     }
+  },
+  props: {
+    swiperList: Array
   }
 }
 </script>
@@ -52,7 +38,7 @@ export default {
   overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 27.25%;
+  padding-bottom: 31.25%;
   background: #eee;
 
   .swiper-img {

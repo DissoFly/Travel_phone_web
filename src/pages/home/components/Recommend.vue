@@ -19,31 +19,10 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  // props: {
-  //   recommendList: Array
-  // },
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '隐贤山庄'
-        }, {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '隐贤山庄'
-        }, {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/34/34170b200db08a5a90.img.jpg_200x200_cc3130fd.jpg',
-          title: '隐贤山庄',
-          desc: '隐贤山庄'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
+
 }
 </script>
 
