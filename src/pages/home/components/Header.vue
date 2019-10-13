@@ -1,15 +1,19 @@
 <template>
-  <div class="header">
+ <div class="header">
     <div class="header-left">
-      <div class="iconfont back-icon">&#xe624;</div>
+       <div class="iconfont back-icon" >&#xe65b;</div>
     </div>
-
-      <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市/景点/主题</div>
-
+    <div class="header-input">
+       <span class="iconfont">&#xe652;</span>
+        输入城市/景点/游玩主题
+    </div>
     <router-link to="/city">
-      <div class="header-right">{{this.city}}<span class="iconfont arrow-icon">&#xe600;</span></div>
+      <div class="header-right">
+          {{this.city}}
+         <span class="iconfont arrow-icon">&#xe612;</span>
+      </div>
     </router-link>
-  </div>
+ </div>
 </template>
 
 <script>
