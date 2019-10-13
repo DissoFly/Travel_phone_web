@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     getCityInfo () {
-      axios.get('./api/city.json')
+      axios.get('http://www.liangzhuobin.com:8080/test/api/v2/json/city.json')
         .then(this.handleGEtcityInfoSucc)
     },
     handleGEtcityInfoSucc (res) {

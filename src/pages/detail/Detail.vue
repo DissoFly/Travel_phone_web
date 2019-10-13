@@ -34,7 +34,7 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json', {
+      axios.get('http://www.liangzhuobin.com:8080/test/api/v2/json/detail.json', {
         params: {
           id: this.$route.params.id
         }
